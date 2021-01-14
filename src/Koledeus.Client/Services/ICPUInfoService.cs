@@ -13,17 +13,22 @@ namespace Koledeus.Client.Services
     {
         public (double, long) GetUsageOfProcess()
         {
+            object _lock = new object();
+
             double totalCpuUsage = 0;
             long totalMemoryUsage = 0;
             var processes = Process.GetProcesses();
 
-            // TODO (peacecwz): This code is not working on threadsafe, It needs refactoring for working threadsafe
             Parallel.ForEach(processes, process =>
             {
                 var cpuUsage = GetCPUUseageByProcess(process);
                 var memoryUsage = GetMemoryUsageByProcess(process);
-                totalCpuUsage += cpuUsage;
-                totalMemoryUsage += memoryUsage;
+
+                lock (_lock)
+                {
+                    totalCpuUsage += cpuUsage;
+                    totalMemoryUsage += memoryUsage;
+                }
             });
 
             return (totalCpuUsage, totalMemoryUsage);

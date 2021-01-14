@@ -9,6 +9,10 @@ ProjectSection(SolutionItems) = preProject
 	protos\cpu.proto = protos\cpu.proto
 EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{1C07D117-49B8-49D3-952C-C6DEC6D2B052}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Koledeus.Client.Benchmark", "tests\Koledeus.Client.Benchmark\Koledeus.Client.Benchmark.csproj", "{EB85A4E6-1FCE-426A-9021-BA857B67A57B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,11 +20,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C55AEC8E-355E-489C-B2DC-43A838E57D0C} = {2CB382B5-6312-426D-9654-1AA607646848}
+		{EB85A4E6-1FCE-426A-9021-BA857B67A57B} = {1C07D117-49B8-49D3-952C-C6DEC6D2B052}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C55AEC8E-355E-489C-B2DC-43A838E57D0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C55AEC8E-355E-489C-B2DC-43A838E57D0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C55AEC8E-355E-489C-B2DC-43A838E57D0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C55AEC8E-355E-489C-B2DC-43A838E57D0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB85A4E6-1FCE-426A-9021-BA857B67A57B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB85A4E6-1FCE-426A-9021-BA857B67A57B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB85A4E6-1FCE-426A-9021-BA857B67A57B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB85A4E6-1FCE-426A-9021-BA857B67A57B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
